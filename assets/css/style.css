@@ -211,7 +211,24 @@ a:active {
         #115b9b 125%
     );
     color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px #6192ba67;
+    transition: transform 0.3s;
 }
+
+.about-us-col-body {
+    padding: 20px;
+}
+
+.about-us-col:hover {
+    transform: translateY(-5px);
+}
+
+.card-seguimento-colaboradores-body i {
+    color: var(--azul-destacado);
+    margin-bottom: 10px;
+}
+
 .about-us-col .col-icon-wrapper {
     min-height: 80px;
 }
@@ -350,13 +367,13 @@ a:active {
 
 /* footer 
 ================================= */
-.footer-top {
-    background: #115c9b;
+/* .footer-top {
+    background: #f38548;
     height: 40px;
-}
+} */
 
 .main-footer {
-    background: #1f76bd;
+    background: #628b4a;
     color: #fff;
 }
 .main-footer .footer-main {
@@ -395,7 +412,7 @@ a:active {
 }
 
 .footer-bottom {
-    background: #115c9b;
+    background: #f38548;
     padding: 3px;
 }
 
@@ -1137,11 +1154,13 @@ form .alert {
 @media (max-width: 768px) {
     .navbar-brand img {
         max-height: 50px;
+        margin-top: -6px;
     }
 }
 
 @media (max-width: 480px) {
     .navbar-brand img {
         max-height: 40px;
+        margin-top: 0.0625rem;
     }
 }
