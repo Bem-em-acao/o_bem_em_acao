@@ -558,7 +558,7 @@ form .alert {
 .btn-primary {
     background: #115c9b;
     border: none;
-    border-radius: 0;
+    border-radius: 20px;
     padding: 10px 25px;
     border: 1px solid transparent;
     -moz-transition: all, 0.3s;
