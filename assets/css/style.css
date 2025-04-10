@@ -376,22 +376,27 @@ a:active {
     background: #628b4a;
     color: #fff;
 }
+
 .main-footer .footer-main {
     padding: 30px 0;
 }
+
 .main-footer .footer-title {
     text-transform: uppercase;
     margin-bottom: 10px;
 }
+
 .main-footer .footer-title .title-under {
     background: #fff;
     margin: 15px 0;
     text-align: left;
 }
+
 .main-footer .footer-title .title-under:after {
     margin: 0;
     background: #fff;
 }
+
 .main-footer .footer-content {
     text-align: justify;
     font-size: 13px;
@@ -456,6 +461,34 @@ a:active {
 .footer-form input::-webkit-input-placeholder,
 .footer-form textarea::-webkit-input-placeholder {
     color: #fff;
+}
+
+/* Responsividade para tablets e celulares */
+@media (max-width: 768px) {
+    .mensagem-footer {
+        text-align: center !important;
+        margin-top: 20px;
+    }
+
+    .menu-footer ul {
+        padding-left: 0;
+        text-align: center;
+    }
+
+    .menu-footer ul li {
+        display: block;
+        margin: 5px 0;
+    }
+
+    .redes-footer {
+        text-align: center !important;
+        margin-top: 20px;
+    }
+
+    .header-contact {
+        text-align: center;
+        padding-bottom: 10px;
+    }
 }
 
 /* Pages 
