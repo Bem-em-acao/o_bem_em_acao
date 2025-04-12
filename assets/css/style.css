@@ -12,11 +12,11 @@ body::-webkit-scrollbar {
 }
 
 body::-webkit-scrollbar-track {
-    background-color: #628b4a;
+    background-color: #f38548;
 }
 
 body::-webkit-scrollbar-thumb {
-    background-color: #f38548;
+    background-color: #628b4a;
 }
 
 body {
@@ -43,8 +43,7 @@ a:active {
 /* =============================================================================
   Layout
 ========================================================================== */
-/* Header 
-================================= */
+
 .navbar-static-top {
     margin: 0;
     border: 0;
