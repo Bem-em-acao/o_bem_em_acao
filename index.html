@@ -93,12 +93,12 @@
 
           <div class="carousel-caption">
 
-            <h2 class="carousel-title bounceInDown animated slow">Nossa causa, nossa força</h2>
+            <h2 class="carousel-title bounceInDown animated slow">Nossa causa, nossa força! </h2>
             <h4 class="carousel-subtitle bounceInUp animated slow ">Juntos por um mundo melhor!</h4>
             <!-- <a href="#" class="btn btn-lg btn-secondary hidden-xs bounceInUp animated slow" data-toggle="modal"
               data-target="#donateModal">DOE AGORA</a> -->
 
-          </div> <!-- /.carousel-caption -->
+          </div>
 
         </div>
 
@@ -113,13 +113,13 @@
 
           <div class="carousel-caption">
 
-            <h2 class="carousel-title bounceInDown animated slow">Juntos podemos melhorar vidas!
+            <h2 class="carousel-subtitle bounceInDown animated slow">
+              Pequenos gestos, grandes mudanças.
             </h2>
-            <h4 class="carousel-subtitle bounceInUp animated slow">Sua ajuda transforma vidas!</h4>
-            <a href="#" class="btn btn-lg btn-secondary hidden-xs bounceInUp animated" data-toggle="modal"
-              data-target="#donateModal">DOE AGORA</a>
+            <!-- <a href="#" class="btn btn-lg btn-secondary hidden-xs bounceInUp animated" data-toggle="modal"
+              data-target="#donateModal">DOE AGORA</a> -->
 
-          </div> <!-- /.carousel-caption -->
+          </div>
 
         </div>
 
@@ -134,13 +134,11 @@
 
           <div class="carousel-caption">
 
-            <h2 class="carousel-title bounceInDown animated slow">Um centavo é muito dinheiro, se você não tem nenhum.
-            </h2>
-            <h4 class="carousel-subtitle bounceInUp animated slow">Você pode fazer a diferença!</h4>
-            <a href="#" class="btn btn-lg btn-secondary hidden-xs bounceInUp animated slow" data-toggle="modal"
-              data-target="#donateModal">DOE AGORA</a>
+            <h4 class="carousel-subtitle bounceInUp animated slow">Inspire, conecte e transforme a
+              humanidade com você.
+            </h4>
 
-          </div> <!-- /.carousel-caption -->
+          </div>
 
         </div>
 
@@ -560,17 +558,30 @@
   <!-- Template main javascript -->
   <script src="assets/js/main.js"></script>
 
-  <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
   <script>
-      (function (b, o, i, l, e, r) {
-        b.GoogleAnalyticsObject = l; b[l] || (b[l] =
-          function () { (b[l].q = b[l].q || []).push(arguments) }); b[l].l = +new Date;
-        e = o.createElement(i); r = o.getElementsByTagName(i)[0];
-        e.src = '//www.google-analytics.com/analytics.js';
-        r.parentNode.insertBefore(e, r)
-      }(window, document, 'script', 'ga'));
-    ga('create', 'UA-XXXXX-X'); ga('send', 'pageview');
+    $(document).ready(function () {
+      // Detecta quando o slide está sendo trocado manualmente (avançar ou voltar)
+      $('.carousel-control-next, .carousel-control-prev').on('click', function () {
+        // Adiciona a classe fade-out ao título e subtítulo do slide atual
+        $('.carousel-item.active').addClass('fade-out').removeClass('fade-in');
+
+        // Remove a classe fade-out após a animação para a próxima troca
+        setTimeout(function () {
+          $('.carousel-item.active').removeClass('fade-out');
+        }, 3000); // Tempo de duração do fade-out (3 segundos)
+      });
+
+      // Detecta quando o slide estiver completamente trocado
+      $('#carouselExample').on('slid.bs.carousel', function (e) {
+        // Quando o slide mudar, aplica a animação fade-in no título e subtítulo
+        $(e.relatedTarget).find('.carousel-title').css('animation', 'fadeIn 3s ease-in-out forwards');
+        $(e.relatedTarget).find('.carousel-subtitle').css('animation', 'fadeIn 3s ease-in-out forwards');
+      });
+    });
+
   </script>
+
+
 
 </body>
 
