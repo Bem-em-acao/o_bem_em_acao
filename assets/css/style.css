@@ -133,6 +133,87 @@ a:active {
 
 /* Home Slider 
 ================================= */
+
+/* Título */
+.titulo-bem-em-acao {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 26px;
+    color: #f77125;
+    font-weight: bold;
+}
+
+/* Container com margem de dois dedos */
+.container-bem-em-acao {
+    margin: 32px;
+}
+
+/* Texto com espaçamento e parágrafo */
+.texto-bem-em-acao {
+    text-align: justify;
+    line-height: 1.6;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.texto-bem-em-acao + .texto-bem-em-acao {
+    margin-top: 20px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .titulo-bem-em-acao {
+        font-size: 28px;
+    }
+    .container-bem-em-acao {
+        margin: 24px;
+    }
+    .texto-bem-em-acao {
+        font-size: 16px;
+        margin: 0;
+    }
+    .col-md-3 {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .titulo-bem-em-acao {
+        font-size: 24px;
+    }
+    .container-bem-em-acao {
+        margin: 16px;
+    }
+    .texto-bem-em-acao {
+        font-size: 12px;
+        margin: 0;
+    }
+}
+
+/* Container do botão centralizado */
+.botao-leia-mais-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+/* Botão personalizado */
+.botao-leia-mais {
+    background-color: #f77125;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.botao-leia-mais:hover {
+    background-color: #d65f1f;
+}
+
 .carousel-home img {
     width: 100%;
 }
@@ -151,7 +232,7 @@ a:active {
 
 .carousel-home .carousel-control .fa {
     font-size: 2.5em;
-    padding-top: 12px;
+    padding-top: 14px;
 }
 
 .carousel-home .carousel-control:hover {
@@ -209,7 +290,7 @@ a:active {
 
 /* Tamanho personalizável do subtítulo */
 .carousel-home .carousel-subtitle {
-    font-size: 22px;
+    font-size: 23px;
     font-weight: 500;
     text-transform: uppercase;
 }
@@ -569,6 +650,28 @@ a:active {
 
 .main-container {
     margin-bottom: 50px;
+}
+
+/* Estilos para a página "Sobre nós" */
+.page-heading {
+    opacity: 0; /* Iniciar oculto */
+    animation: fadeIn 1s ease-in-out forwards; /* Animação para o fade in */
+}
+
+.page-heading.fade-out {
+    animation: fadeOut 5s ease-in-out forwards; /* Animação para o fade out */
+}
+
+.page-title {
+    font-size: 40px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.page-description {
+    font-size: 18px;
+    font-weight: normal;
 }
 
 /* Página Contato */
@@ -991,7 +1094,7 @@ form .alert {
         font-size: 16px;
     }
     .carousel-home .carousel-control {
-        background: #1f76bd;
+        background: #f77125;
         height: 40px;
         width: 20px;
         top: 50%;
@@ -1274,26 +1377,4 @@ form .alert {
     100% {
         opacity: 0;
     }
-}
-
-/* Estilos para a página "Sobre nós" */
-.page-heading {
-    opacity: 0; /* Iniciar oculto */
-    animation: fadeIn 1s ease-in-out forwards; /* Animação para o fade in */
-}
-
-.page-heading.fade-out {
-    animation: fadeOut 5s ease-in-out forwards; /* Animação para o fade out */
-}
-
-.page-title {
-    font-size: 40px;
-    font-weight: bold;
-    text-transform: uppercase;
-    margin-bottom: 20px;
-}
-
-.page-description {
-    font-size: 18px;
-    font-weight: normal;
 }
