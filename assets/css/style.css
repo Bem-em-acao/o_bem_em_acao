@@ -1,5 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 
+:root {
+    --verde-logomarca: #628b4a;
+    --laranja-logomarca: #f38548;
+    --azul-royal: #115c9b;
+}
+
 /* Estilos para scrollbars */
 ::-webkit-scrollbar {
     width: 2px;
@@ -12,16 +18,16 @@ body::-webkit-scrollbar {
 }
 
 body::-webkit-scrollbar-track {
-    background-color: #f38548;
+    background-color: var(--laranja-logomarca);
 }
 
 body::-webkit-scrollbar-thumb {
-    background-color: #628b4a;
+    background-color: var(--verde-logomarca);
 }
 
 body {
     font-family: "Poppins", serif;
-    color: #115c9b;
+    color: var(--azul-royal);
 }
 
 h1,
@@ -44,7 +50,6 @@ a:active {
 /* =============================================================================
   Layout
 ========================================================================== */
-
 .navbar-static-top {
     margin: 0;
     border: 0;
@@ -236,9 +241,7 @@ a:active {
 /* Remover sublinhado de links dentro do botão */
 .botao-leia-mais a {
     text-decoration: none;
-    /* Garantir que o link dentro do botão não tenha sublinhado */
     color: white;
-    /* Garantir que o texto do link fique branco */
 }
 
 /* ==================== */
@@ -272,7 +275,6 @@ a:active {
 /* Ícones */
 .row .p-4.shadow.rounded i {
     font-size: 2.8rem;
-    color: #000;
     margin-bottom: 0.5rem;
 }
 
@@ -288,8 +290,7 @@ a:active {
 /* Parágrafos e listas */
 .row .p-4.shadow.rounded p,
 .row .p-4.shadow.rounded ul {
-    font-size: 1.1rem;
-    color: #333;
+    font-size: 1.4 rem;
     line-height: 1.7;
     text-align: justify;
     margin-bottom: 0;
@@ -493,7 +494,7 @@ a:active {
     position: absolute;
     bottom: 0;
     text-align: center;
-    background: rgba(31, 118, 189, 0.8);
+    background: rgba(223, 113, 3, 0.795);
     width: 100%;
     color: #fff;
     text-transform: uppercase;
@@ -748,7 +749,7 @@ a:active {
 /* Pages 
 ================================= */
 .page-heading {
-    background: url("../images/heading-bg.jpg?1428795369") no-repeat center;
+    background: url("../images/Projeto\ Bem\ Em\ Ação\ \(3\).png") no-repeat center;
     background-size: cover;
     min-height: 190px;
     color: #fff;
@@ -782,7 +783,7 @@ a:active {
 }
 
 .page-title {
-    font-size: 40px;
+    font-size: 30px;
     font-weight: bold;
     text-transform: uppercase;
     margin-bottom: 20px;
@@ -955,6 +956,7 @@ form .alert {
     text-transform: uppercase;
     font-size: 26px;
     margin-bottom: 50px;
+    color: var(--laranja-logomarca);
 }
 
 .title-style-2 {
@@ -962,6 +964,7 @@ form .alert {
     text-transform: uppercase;
     font-size: 26px;
     margin-bottom: 25px;
+    color: var(--laranja-logomarca);
 }
 
 .title-style-2 .title-under {
@@ -977,7 +980,7 @@ form .alert {
 .title-under {
     display: block;
     margin: 5px auto;
-    background: #1f76bd;
+    background: var(--verde-logomarca);
     height: 1px;
     width: 280px;
 }
@@ -1109,7 +1112,7 @@ form .alert {
     left: 0;
     z-index: 99;
     color: #fff;
-    background: rgba(31, 118, 189, 0.75);
+    background: rgba(223, 113, 3, 0.395);
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
     opacity: 0;
     -moz-transition: all, 0.6s;
@@ -1583,12 +1586,6 @@ form .alert {
     max-height: 52px;
     width: auto;
     margin-top: -10px;
-
-    transition: transform 0.3s ease-in-out;
-}
-
-.navbar-brand img:hover {
-    transform: scale(1.05);
 }
 
 /* Responsividade */
@@ -1627,4 +1624,16 @@ form .alert {
     100% {
         opacity: 0;
     }
+}
+
+.sobre-nos-texto {
+    text-align: justify;
+    font-size: 14px;
+    line-height: 1.8;
+    color: #333;
+    border-left: 4px solid #ff9900;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }
