@@ -58,7 +58,6 @@ a:active {
 
 .navbar-top {
     background: #7aa464;
-    /* Verde mais suave */
     font-size: 13px;
     padding: 6px 0;
 }
@@ -80,7 +79,6 @@ a:active {
     margin-bottom: 0;
     color: #fff;
     background: #f77125;
-    /* Laranja mais equilibrado */
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -591,15 +589,18 @@ a:active {
 /* Team 
 ================================= */
 .team-member {
-    background: #1f76bd;
+    background: var(--verde-logomarca);
     color: #fff;
     text-align: center;
     padding-bottom: 15px;
+    margin-bottom: 10px;
+    border-radius: 30px;
     border: 1px solid #1f76bd;
 }
 
 .team-member .thumnail img {
     width: 100%;
+    border-radius: 30px;
 }
 
 .team-member .member-name {
@@ -836,7 +837,7 @@ a:active {
     display: inline-block;
     width: 35px;
     height: 35px;
-    background: #1f76bd;
+    background: var(--laranja-logomarca);
     vertical-align: middle;
     margin-right: 5px;
     color: #fff;
@@ -1636,4 +1637,50 @@ form .alert {
     border-radius: 8px;
     margin-bottom: 2rem;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.sobre-nos-carrosel {
+  position: relative;
+  width: 700px;
+  height: 250px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.sobre-nos-carrosel .carousel-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 100%;
+  height: 100%;
+}
+
+.sobre-nos-carrosel img {
+  width: 400px;
+  height: 250px;
+  object-fit: cover;
+  flex-shrink: 0;
+  border-radius: 10px;
+}
+
+.sobre-nos-carrosel .prev,
+.sobre-nos-carrosel .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 5px 10px;
+  z-index: 1;
+  border-radius: 5px;
+}
+
+.sobre-nos-carrosel .prev {
+  left: 10px;
+}
+
+.sobre-nos-carrosel .next {
+  right: 10px;
 }
