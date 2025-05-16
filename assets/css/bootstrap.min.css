@@ -1832,6 +1832,7 @@ pre code {
     min-height: 1px;
     padding-right: 15px;
     padding-left: 15px;
+    margin-top: 8px;
 }
 
 .col-xs-1,
@@ -7908,3 +7909,4 @@ button.close {
         display: none !important;
     }
 }
+
